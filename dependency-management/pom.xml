@@ -427,6 +427,13 @@ Dependency management and version-properties
 				<artifactId>filters</artifactId>
 				<version>2.0.235-1</version>
 			</dependency>
+			
+			<!--  DBO  -->
+			<dependency>
+				<groupId>de.dbo.tools</groupId>
+				<artifactId>print</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
