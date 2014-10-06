@@ -9,12 +9,14 @@
 
 	<name>Root</name>
 	<description>
-Super project for all tools. It imports dependency-management and 
-declares very basic dependencies and defines plug-in management.
+Root for all artifacts.
+The artifact declares Java-versions and basic project properties
 	</description>
 
 	<properties>
+		<!-- Java -->
 		<java.version>1.7</java.version>
+		<jdk.version>1.7.60</jdk.version>
 		 
 		<!-- UTF-8 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
