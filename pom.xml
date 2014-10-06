@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+		<groupId>de.dbo</groupId>
+		<artifactId>root-reactor</artifactId>
+		<version>0.0.0-SNAPSHOT</version>
+		<packaging>pom</packaging>
+		<name>Installer</name>
+	   <description>
+Installation of the root-modules
+	   </description>
+	   
+	   <modules>
+	   		<module>root</module>
+	   		<module>versions</module>
+	   		<module>dependency-management</module>
+	   </modules>
+
+</project>

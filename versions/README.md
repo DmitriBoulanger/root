@@ -1,5 +1,5 @@
-Convert maven properties in properties
-===============================================
+Convert maven properties in java-properties
+===========================================
 
 Example
 
@@ -14,4 +14,4 @@ Example
 2. Replace [@] with [      @]
 3. Use RegEx [@.*version=\s] to be replaced with []
 4. Replace [>] with [=]
-5. Drop blank at the left 
+5. Drop blanks at the left 

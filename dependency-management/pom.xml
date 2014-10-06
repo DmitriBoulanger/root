@@ -6,9 +6,9 @@
 	<artifactId>dependency-management</artifactId>
 	<version>0.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Samples Dependency Management</name>
+	<name>Dependency Mmnagement</name>
 	<description>
-The POM ONLY contains dependency management 
+Dependency management and version-properties
 	</description>
 
 	<properties>
