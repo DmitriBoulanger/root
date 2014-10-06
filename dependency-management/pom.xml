@@ -25,7 +25,7 @@ Dependency management and version-properties
 		<junit.version>4.1</junit.version>
 		
 		<!-- Spring -->
-		
+
 		<spring.version>3.1.2.RELEASE</spring.version>
 		<cglib.version>2.2.2</cglib.version>
 		<asm.version>3.3.1</asm.version>
@@ -36,13 +36,13 @@ Dependency management and version-properties
 		<jstl.version>1.1.2</jstl.version>
 
 		<!-- Persistence -->
-		
+
 		<jpa.version>1.0.2</jpa.version>
 		<eclipselink.version>2.5.1</eclipselink.version>
 		<eclipselink.javax.persistence.version>2.1.0</eclipselink.javax.persistence.version>
 		
 		<!-- Hibernate -->
-		
+
 		<hibernate.version>3.3.0.ga</hibernate.version>
 		<hibernate-core.version>3.6.9.Final</hibernate-core.version>
 		<hibernate-entitymanager.version>3.6.9.Final</hibernate-entitymanager.version>
@@ -51,29 +51,29 @@ Dependency management and version-properties
 		<hibernate-jpa-2.0-api.version>1.0.1.Final</hibernate-jpa-2.0-api.version>
 		
 		<!-- Databases -->
-		
+
 		<hsqldb.version>1.8.0.7</hsqldb.version>
 		<derby.version>10.8.2.2</derby.version>
 		<mysql.version>5.1.6</mysql.version>
 
 		<!-- Maven Mojo -->
-		
+
 		<maven-project.version>2.2.1</maven-project.version>
 		<maven-plugin-api.version>2.0</maven-plugin-api.version>
 		<maven-shared-io.version>1.1</maven-shared-io.version>
-      	<maven-plugin-annotations.version>3.3</maven-plugin-annotations.version>
-      	<maven-plugin-testing-harness.version>1.1</maven-plugin-testing-harness.version>
-      	<maven-profile.version>2.2.1</maven-profile.version>
-      	<maven-model.version>2.2.1</maven-model.version>
-      	<maven-artifact.version>2.2.1</maven-artifact.version>
-      	<maven-settings.version>2.2.1</maven-settings.version>
-      	<maven-artifact-manager.version>2.2.1</maven-artifact-manager.version>
-      	<maven-repository-metadata.version>2.2.1</maven-repository-metadata.version>
-      	<maven-plugin-registry.version>2.2.1</maven-plugin-registry.version>
-      	<maven-plugin-testing-harness.version>1.1</maven-plugin-testing-harness.version>
-      	
-      	<wagon-provider-api.version>1.0-beta-6</wagon-provider-api.version>
-      	
+		<maven-plugin-annotations.version>3.3</maven-plugin-annotations.version>
+		<maven-plugin-testing-harness.version>1.1</maven-plugin-testing-harness.version>
+		<maven-profile.version>2.2.1</maven-profile.version>
+		<maven-model.version>2.2.1</maven-model.version>
+		<maven-artifact.version>2.2.1</maven-artifact.version>
+		<maven-settings.version>2.2.1</maven-settings.version>
+		<maven-artifact-manager.version>2.2.1</maven-artifact-manager.version>
+		<maven-repository-metadata.version>2.2.1</maven-repository-metadata.version>
+		<maven-plugin-registry.version>2.2.1</maven-plugin-registry.version>
+		<maven-plugin-testing-harness.version>1.1</maven-plugin-testing-harness.version>
+
+		<wagon-provider-api.version>1.0-beta-6</wagon-provider-api.version>
+
 		<plexus-utils.version>1.5.7</plexus-utils.version>
 		<plexus-container-default.version>1.0-alpha-9-stable-1</plexus-container-default.version>
 
@@ -84,7 +84,7 @@ Dependency management and version-properties
 		
 			
 			<!-- MOJO MAVEN PLUG-INS -->
-			
+
 			<dependency>
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-plugin-api</artifactId>
@@ -101,10 +101,10 @@ Dependency management and version-properties
 				<version>${maven-shared-io.version}</version>
 			</dependency>
 			<dependency>
-      			<groupId>org.apache.maven.plugin-tools</groupId>
-     		 	<artifactId>maven-plugin-annotations</artifactId>
-     		 	<version>${maven-plugin-annotations.version}</version>
-      		</dependency>
+				<groupId>org.apache.maven.plugin-tools</groupId>
+				<artifactId>maven-plugin-annotations</artifactId>
+				<version>${maven-plugin-annotations.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.apache.maven.shared</groupId>
 				<artifactId>maven-plugin-testing-harness</artifactId>
@@ -145,14 +145,14 @@ Dependency management and version-properties
 				<artifactId>maven-plugin-registry</artifactId>
 				<version>${maven-plugin-registry.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-provider-api</artifactId>
 				<version>${wagon-provider-api.version}</version>
 			</dependency>
-			
-			
+
+
 			<dependency>
 				<groupId>org.codehaus.plexus</groupId>
 				<artifactId>plexus-utils</artifactId>
@@ -180,6 +180,14 @@ Dependency management and version-properties
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
 				<version>${spring.version}</version>
+				<!-- should be excluded but spring-core throws exception ....			
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions> 
+				-->
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -208,7 +216,7 @@ Dependency management and version-properties
 			</dependency>
 
 			<!-- Spring references -->
-			
+
 			<dependency>
 				<groupId>cglib</groupId>
 				<artifactId>cglib</artifactId>
@@ -221,7 +229,7 @@ Dependency management and version-properties
 			</dependency>
 			
 			<!-- EE -->
-			
+
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>servlet-api</artifactId>
@@ -239,7 +247,7 @@ Dependency management and version-properties
 			</dependency>
 
 			<!-- PERSISTENCY -->
-			
+
 			<dependency>
 				<groupId>javax.persistence</groupId>
 				<artifactId>persistence-api</artifactId>
@@ -257,7 +265,7 @@ Dependency management and version-properties
 			</dependency>
 
         	<!-- HIBERNATE -->
-        	
+
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate</artifactId>
@@ -364,11 +372,6 @@ Dependency management and version-properties
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>log4j</groupId>
-  				<artifactId>log4j</artifactId>
-				<version>${slf4j.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>uk.org.lidalia</groupId>
