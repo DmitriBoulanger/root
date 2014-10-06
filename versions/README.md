@@ -1,5 +1,5 @@
-Convert maven properties in java-properties
-===========================================
+Convert maven-properties into java-properties
+=============================================
 
 Example
 
@@ -10,8 +10,10 @@ Example
     		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     		<project.reporting.outputEncoding>UTF-8</<project.reporting.outputEncoding>
 
-1. Replace [</] with [@]
-2. Replace [@] with [      @]
-3. Use RegEx [@.*version=\s] to be replaced with []
-4. Replace [>] with [=]
-5. Drop blanks at the left 
+ALgorithm
+
+	1. Replace [</] with [@]
+	2. Replace [@] with [  @]
+	3. Replace RegEx [@.*version>\s] with []
+	4. Replace [>] with [=]
+	5. Drop blanks at the left 
