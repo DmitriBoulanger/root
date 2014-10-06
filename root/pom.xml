@@ -8,31 +8,43 @@
 	<packaging>pom</packaging>
 	<name>Root</name>
 	<description>
-Root for all artifacts.
-The artifact declares Java-versions and basic project properties
+Global root for all artifacts in all repositories.
+The artifact declares Java-versions, basic project properties and performs
+plug-ins and dependency management
 	</description>
 
 	<properties>
 		<!-- Java -->
 		<java.version>1.7</java.version>
 		<jdk.version>1.7.0_67</jdk.version>
-		 
+
 		<!-- UTF-8 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		
-		<!-- MAVEN <version>${XXX.version}</version> -->
+
+		<!-- ORG.APACHE.MAVEN.PLUGINS <version>${XXX.version}</version> -->
 		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
 		<maven-jar-plugin.version>2.4</maven-jar-plugin.version>
+		<maven-jarsigner-plugin.version>1.3.2</maven-jarsigner-plugin.version>
 		<maven-surefire-plugin.version>2.4</maven-surefire-plugin.version>
 		<maven-enforcer-plugin.version>1.3.1</maven-enforcer-plugin.version>
 		<maven-install-plugin.version>2.5.2</maven-install-plugin.version>
+		<maven-assembly-plugin.version>2.4</maven-assembly-plugin.version>
+		<maven-dependency-plugin.version>2.8</maven-dependency-plugin.version>
+		<maven-war-plugin.version>2.4</maven-war-plugin.version>
+		
+		<!-- OTHER (MOJO) MAVEN.PLUGINS <version>${XXX.version}</version> -->
+		<hibernate3-maven-plugin.version>3.0</hibernate3-maven-plugin.version>
+		<properties-maven-plugin.version>1.0-alpha-2</properties-maven-plugin.version>
+		
+		<!-- THIRD-PARTY PLUGINS <version>${XXX.version}</version> -->
 	</properties>
 
 	<build>
 		<finalName>${project.groupId}-${project.artifactId}</finalName>
 		<pluginManagement>
 			<plugins>
+				<!-- ORG.APACHE.MAVEN.PLUGINS -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -49,6 +61,9 @@ The artifact declares Java-versions and basic project properties
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${maven-surefire-plugin.version}</version>
+					<configuration>
+						<skipTests>false</skipTests>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -57,8 +72,37 @@ The artifact declares Java-versions and basic project properties
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jarsigner-plugin</artifactId>
+					<version>${maven-jarsigner-plugin.version}</version>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
 					<version>${maven-enforcer-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>enforce-banned-dependencies</id>
+							<goals>
+								<goal>enforce</goal>
+							</goals>
+							<configuration>
+								<rules>
+									<!-- Ensure no conflicting jar versions -->
+									<DependencyConvergence />
+									<bannedDependencies>
+										<searchTransitive>true</searchTransitive>
+										<excludes>
+											<exclude>commons-logging</exclude>
+										</excludes>
+									</bannedDependencies>
+								</rules>
+								<fail>false</fail>
+							</configuration>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -68,7 +112,7 @@ The artifact declares Java-versions and basic project properties
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>2.4</version>
+					<version>${maven-war-plugin.version}</version>
 					<configuration>
 						<warName>${project.artifactId}</warName>
 					</configuration>
@@ -76,14 +120,12 @@ The artifact declares Java-versions and basic project properties
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>2.4</version>
+					<version>${maven-assembly-plugin.version}</version>
 				</plugin>
-
-
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.8</version>
+					<version>${maven-dependency-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -91,11 +133,19 @@ The artifact declares Java-versions and basic project properties
 					<version>1.3.1</version>
 				</plugin>
 
+				<!-- OTHER (MOJO) MAVEN.PLUGINS -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>hibernate3-maven-plugin</artifactId>
+					<version>${hibernate3-maven-plugin.version}</version>
+				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>properties-maven-plugin</artifactId>
-					<version>1.0-alpha-2</version>
+					<version>${properties-maven-plugin.version}</version>
 				</plugin>
+				
+				<!-- THIRD-PARTY PLUGINS -->
 
 				<!--Jetty Server with Log4j and its configuration -->
 				<plugin>
@@ -110,14 +160,10 @@ The artifact declares Java-versions and basic project properties
 						</dependency>
 					</dependencies>
 				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>hibernate3-maven-plugin</artifactId>
-					<version>3.0</version>
-				</plugin>
 			</plugins>
 		</pluginManagement>
 
+		<!-- DEAFULT ACTIVE PLUGINS -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -126,13 +172,14 @@ The artifact declares Java-versions and basic project properties
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<skipTests>false</skipTests>
-				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -144,8 +191,8 @@ The artifact declares Java-versions and basic project properties
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
-	<!-- TEST dependencies -->
+
+	<!-- DEAFULT ACTIVE TEST-dependencies -->
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
