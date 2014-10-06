@@ -147,7 +147,7 @@ plug-ins and dependency management
 				
 				<!-- THIRD-PARTY PLUGINS -->
 
-				<!--Jetty Server with Log4j and its configuration -->
+				<!--Jetty Server with Log4j -->
 				<plugin>
 					<groupId>org.mortbay.jetty</groupId>
 					<artifactId>maven-jetty-plugin</artifactId>
