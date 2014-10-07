@@ -205,7 +205,7 @@ plug-ins and dependency management
 		</dependencies>
 	</dependencyManagement>
 
-	<!-- DEAFULT ACTIVE TEST-dependencies -->
+	<!-- DEAFULT ACTIVE DEPENDENCIES -->
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
