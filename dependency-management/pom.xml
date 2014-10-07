@@ -520,6 +520,11 @@ Dependency management and version-properties
 				<artifactId>print</artifactId>
 				<version>${dbo.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>de.dbo.tools</groupId>
+				<artifactId>logging</artifactId>
+				<version>${dbo.version}</version>
+		</dependency>
 
 		</dependencies>
 	</dependencyManagement>
