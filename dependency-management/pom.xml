@@ -79,6 +79,27 @@ Dependency management and version-properties
 
 	</properties>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0-alpha-2</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>write-project-properties</goal>
+						</goals>
+						<configuration>
+								<outputFile>${basedir}/../versions/src/main/resources/versions.properties</outputFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencyManagement>
 		<dependencies>
 		
@@ -524,7 +545,7 @@ Dependency management and version-properties
 				<groupId>de.dbo.tools</groupId>
 				<artifactId>logging</artifactId>
 				<version>${dbo.version}</version>
-		</dependency>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
