@@ -4,9 +4,8 @@
 
 	<parent>
 		<groupId>de.dbo</groupId>
-		<artifactId>plugin-management</artifactId>
+		<artifactId>super-plugin-java-management</artifactId>
 		<version>0.0.0-SNAPSHOT</version>
-		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>dependency-management</artifactId>

@@ -4,15 +4,14 @@
 	
 	<parent>
 		<groupId>de.dbo</groupId>
-		<artifactId>plugin-management</artifactId>
+		<artifactId>super-plugin-java-management</artifactId>
 		<version>0.0.0-SNAPSHOT</version>
-		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>root</artifactId>
 	<packaging>pom</packaging>
 	
-	<name>Root</name>
+	<name>Root with managed dependencies</name>
 	<description>
 Root for all application (non-root) projects in all repositories.
 The artifact declares dependency management and shared (basic) dependencies
