@@ -2,10 +2,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.dbo</groupId>
+	<parent>
+		<groupId>de.dbo</groupId>
+		<artifactId>plugin-management</artifactId>
+		<version>0.0.0-SNAPSHOT</version>
+		<relativePath></relativePath>
+	</parent>
+
 	<artifactId>dependency-management</artifactId>
-	<version>0.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	
 	<name>Dependency Management</name>
 	<description>
 Dependency management and version-properties
@@ -84,7 +90,6 @@ Dependency management and version-properties
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>properties-maven-plugin</artifactId>
-				<version>1.0-alpha-2</version>
 				<executions>
 					<execution>
 						<phase>generate-resources</phase>
@@ -103,7 +108,6 @@ Dependency management and version-properties
 	<dependencyManagement>
 		<dependencies>
 		
-			
 			<!-- MOJO MAVEN PLUG-INS -->
 
 			<dependency>
@@ -549,4 +553,5 @@ Dependency management and version-properties
 
 		</dependencies>
 	</dependencyManagement>
+
 </project>

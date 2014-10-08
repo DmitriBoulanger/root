@@ -4,12 +4,13 @@
 	
 	<parent>
 		<groupId>de.dbo</groupId>
-		<artifactId>root</artifactId>
+		<artifactId>plugin-management</artifactId>
 		<version>0.0.0-SNAPSHOT</version>
-		<relativePath>../root/pom.xml</relativePath>
+		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>versions</artifactId>
+	
 	<name>Versions container</name>
 	<description>
 Properties container (JAR with properties-file as a resource).
