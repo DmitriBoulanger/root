@@ -4,7 +4,7 @@
 
 	<parent>
 		<groupId>de.dbo</groupId>
-		<artifactId>super-plugin-java-management</artifactId>
+		<artifactId>super-root-plugin-java-management</artifactId>
 		<version>0.0.0-SNAPSHOT</version>
 	</parent>
 
