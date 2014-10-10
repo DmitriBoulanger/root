@@ -10,7 +10,7 @@
 
 	<artifactId>versions</artifactId>
 	
-	<name>Versions container (JAR)</name>
+	<name>Versions properties-container (JAR)</name>
 	<description>
 Properties container (JAR with properties-file as a resource).
 The properties itself are the versions to be used in the dependency management
