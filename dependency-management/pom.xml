@@ -571,12 +571,6 @@ Dependency management and version-properties
 				<version>${dbo.version}</version>
 			</dependency>
 			
-			<!-- DE.DBO -->
-			<dependency>
-				<groupId>de.dbo.tools.utils</groupId>
-				<artifactId>print</artifactId>
-				<version>${dbo.version}</version>
-			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
