@@ -570,6 +570,11 @@ Dependency management and version-properties
 				<artifactId>resources</artifactId>
 				<version>${dbo.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>de.dbo.tools</groupId>
+				<artifactId>pom</artifactId>
+				<version>${dbo.version}</version>
+			</dependency>
 			
 
 		</dependencies>
