@@ -419,7 +419,7 @@ Dependency management and version-properties
 			<dependency>
 				<groupId>com.thoughtworks.xstream</groupId>
 				<artifactId>xstream</artifactId>
-				<version>1.4.4</version>
+				<version>1.4.8</version>
 			</dependency>
 			<dependency>
 				<groupId>it.unibo.alice.tuprolog</groupId>
