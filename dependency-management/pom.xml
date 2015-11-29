@@ -12,6 +12,7 @@
 	<description>
 Dependency management and version-properties
 	</description>	
+	
 	<artifactId>dependency-management</artifactId>
 	<packaging>pom</packaging>
 
@@ -30,7 +31,6 @@ Dependency management and version-properties
 		<junit-dep.version>4.8.2</junit-dep.version>
 		
 		<!-- Spring -->
-
 		<spring.version>4.1.1.RELEASE</spring.version>
 		<cglib.version>2.2.2</cglib.version>
 		<asm.version>3.3.1</asm.version>
@@ -41,13 +41,11 @@ Dependency management and version-properties
 		<jstl.version>1.1.2</jstl.version>
 
 		<!-- Persistence -->
-
 		<jpa.version>1.0.2</jpa.version>
 		<eclipselink.version>2.5.1</eclipselink.version>
 		<eclipselink.javax.persistence.version>2.1.0</eclipselink.javax.persistence.version>
 		
 		<!-- Hibernate -->
-
 		<hibernate.version>3.3.0.ga</hibernate.version>
 		<hibernate-core.version>3.6.9.Final</hibernate-core.version>
 		<hibernate-entitymanager.version>3.6.9.Final</hibernate-entitymanager.version>
@@ -56,13 +54,11 @@ Dependency management and version-properties
 		<hibernate-jpa-2.0-api.version>1.0.1.Final</hibernate-jpa-2.0-api.version>
 		
 		<!-- Databases -->
-
 		<hsqldb.version>1.8.0.7</hsqldb.version>
 		<derby.version>10.8.2.2</derby.version>
 		<mysql.version>5.1.6</mysql.version>
 
 		<!-- Maven Mojo -->
-
 		<maven-project.version>2.2.1</maven-project.version>
 		<maven-plugin-api.version>2.0</maven-plugin-api.version>
 		<maven-shared-io.version>1.1</maven-shared-io.version>
@@ -108,7 +104,6 @@ Dependency management and version-properties
 		<dependencies>
 		
 			<!-- MOJO MAVEN PLUG-INS -->
-
 			<dependency>
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-plugin-api</artifactId>
@@ -176,7 +171,6 @@ Dependency management and version-properties
 				<version>${wagon-provider-api.version}</version>
 			</dependency>
 
-
 			<dependency>
 				<groupId>org.codehaus.plexus</groupId>
 				<artifactId>plexus-utils</artifactId>
@@ -189,7 +183,6 @@ Dependency management and version-properties
 			</dependency>
 			
 			<!-- SPRING -->
-
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
@@ -240,7 +233,6 @@ Dependency management and version-properties
 			</dependency>
 
 			<!-- Spring references -->
-
 			<dependency>
 				<groupId>cglib</groupId>
 				<artifactId>cglib</artifactId>
@@ -253,7 +245,6 @@ Dependency management and version-properties
 			</dependency>
 			
 			<!-- EE -->
-
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>servlet-api</artifactId>
@@ -271,7 +262,6 @@ Dependency management and version-properties
 			</dependency>
 
 			<!-- PERSISTENCY -->
-
 			<dependency>
 				<groupId>javax.persistence</groupId>
 				<artifactId>persistence-api</artifactId>
@@ -289,7 +279,6 @@ Dependency management and version-properties
 			</dependency>
 
         	<!-- HIBERNATE -->
-
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate</artifactId>
@@ -340,7 +329,6 @@ Dependency management and version-properties
 			</dependency>
 			
 			<!-- DATABASES -->
-
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
@@ -409,7 +397,6 @@ Dependency management and version-properties
 			</dependency>
 						
 			<!--  THIRD PARTIES-->
-
 			<dependency>
 				<groupId>gov.nih.imagej</groupId>
 				<artifactId>imagej</artifactId>
@@ -575,7 +562,6 @@ Dependency management and version-properties
 				<version>${dbo.version}</version>
 			</dependency>
 			
-
 		</dependencies>
 	</dependencyManagement>
 
