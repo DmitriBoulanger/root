@@ -4,7 +4,7 @@
 
 	<name>Plugin and Java Management</name>
 	<description>
-Reactor project to build the Super-Root for all artifacts in all repositories.
+Reactor project to build the root artifacts.
 This artifact itself only declares Java-versions, basic project properties 
 and versions of the maven plug-ins.
 	</description>
