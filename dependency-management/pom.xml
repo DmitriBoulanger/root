@@ -32,7 +32,7 @@ Dependency management and version-properties
 		
 		<!-- Spring -->
 		<spring.version>4.1.1.RELEASE</spring.version>
-		<cglib.version>2.2.2</cglib.version>
+		<cglib.version>3.1</cglib.version>
 		<asm.version>3.3.1</asm.version>
 			
 		<!-- EE -->
