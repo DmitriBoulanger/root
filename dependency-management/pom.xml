@@ -52,6 +52,7 @@ Dependency management and version-properties
 		<hibernate-annotations.version>3.2.1.ga</hibernate-annotations.version>
 		<hibernate-commons-annotations.version>4.0.1.Final</hibernate-commons-annotations.version>
 		<hibernate-jpa-2.0-api.version>1.0.1.Final</hibernate-jpa-2.0-api.version>
+		<hibernate-validator-annotation-processor.version>4.1.0.Final</hibernate-validator-annotation-processor.version>
 		
 		<!-- Databases -->
 		<hsqldb.version>1.8.0.7</hsqldb.version>
@@ -297,6 +298,11 @@ Dependency management and version-properties
 						<artifactId>jta</artifactId>
 					</exclusion>
 				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator-annotation-processor</artifactId>
+				<version>${hibernate-validator-annotation-processor.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate</groupId>
