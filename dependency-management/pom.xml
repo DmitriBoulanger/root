@@ -31,7 +31,7 @@ Dependency management and version-properties
 		<junit-dep.version>4.8.2</junit-dep.version>
 		
 		<!-- Spring -->
-		<spring.version>4.1.1.RELEASE</spring.version>
+		<spring.version>4.2.4.RELEASE</spring.version>
 		<cglib.version>3.1</cglib.version>
 		<asm.version>3.3.1</asm.version>
 			
@@ -42,8 +42,8 @@ Dependency management and version-properties
 
 		<!-- Persistence -->
 		<jpa.version>1.0.2</jpa.version>
-		<eclipselink.version>2.5.1</eclipselink.version>
-		<eclipselink.javax.persistence.version>2.1.0</eclipselink.javax.persistence.version>
+		<eclipselink.version>2.6.2</eclipselink.version>
+		<eclipselink.javax.persistence.version>2.1.1</eclipselink.javax.persistence.version>
 		
 		<!-- Hibernate -->
 		<hibernate.version>3.3.0.ga</hibernate.version>
@@ -56,7 +56,7 @@ Dependency management and version-properties
 		<!-- Databases -->
 		<hsqldb.version>1.8.0.7</hsqldb.version>
 		<derby.version>10.8.2.2</derby.version>
-		<mysql.version>5.1.6</mysql.version>
+		<mysql.version>5.1.38</mysql.version>
 
 		<!-- Maven Mojo -->
 		<maven-project.version>2.2.1</maven-project.version>
