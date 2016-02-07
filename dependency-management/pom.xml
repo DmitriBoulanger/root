@@ -7,12 +7,12 @@
 		<artifactId>super-root-plugin-java-management</artifactId>
 		<version>0.0.0-SNAPSHOT</version>
 	</parent>
-	
+
 	<name>Dependency Management</name>
 	<description>
 Dependency management and version-properties
-	</description>	
-	
+	</description>
+
 	<artifactId>dependency-management</artifactId>
 	<packaging>pom</packaging>
 
@@ -57,6 +57,9 @@ Dependency management and version-properties
 		<hsqldb.version>1.8.0.7</hsqldb.version>
 		<derby.version>10.8.2.2</derby.version>
 		<mysql.version>5.1.38</mysql.version>
+		
+		<!-- EMail -->
+		<javax.mail.version>1.5.2</javax.mail.version>
 
 		<!-- Maven Mojo -->
 		<maven-project.version>2.2.1</maven-project.version>
@@ -92,7 +95,7 @@ Dependency management and version-properties
 							<goal>write-project-properties</goal>
 						</goals>
 						<configuration>
-								<outputFile>${basedir}/../versions/src/main/resources/versions.properties</outputFile>
+							<outputFile>${basedir}/../versions/src/main/resources/versions.properties</outputFile>
 						</configuration>
 					</execution>
 				</executions>
@@ -233,7 +236,7 @@ Dependency management and version-properties
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-			 	<artifactId>spring-test</artifactId>
+				<artifactId>spring-test</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
 
@@ -331,6 +334,13 @@ Dependency management and version-properties
 				<groupId>org.apache.geronimo.specs</groupId>
 				<artifactId>geronimo-jta_1.1_spec</artifactId>
 				<version>1.1</version>
+			</dependency>
+			
+			<!-- EMAIL -->
+			<dependency>
+				<groupId>com.sun.mail</groupId>
+				<artifactId>javax.mail</artifactId>
+				<version>${javax.mail.version}</version>
 			</dependency>
 			
 			<!-- DATABASES -->
@@ -515,30 +525,30 @@ Dependency management and version-properties
 				<artifactId>commons-io</artifactId>
 				<version>2.4</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>org.swinglabs.swingx</groupId>
 				<artifactId>swingx-all</artifactId>
 				<version>1.6.4</version>
 			</dependency>
-			
+
 			<dependency>
-        		<groupId>org.mockito</groupId>
-        		<artifactId>mockito-all</artifactId>
-        		<version>1.8.5</version>
-      		</dependency>
-			
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>1.8.5</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.elasticsearch</groupId>
 				<artifactId>elasticsearch</artifactId>
 				<version>1.0.1</version>
-  			</dependency>
+			</dependency>
 			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
 				<version>2.3</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>com.jhlabs</groupId>
 				<artifactId>filters</artifactId>
@@ -566,7 +576,7 @@ Dependency management and version-properties
 				<artifactId>pom</artifactId>
 				<version>${dbo.version}</version>
 			</dependency>
-			
+
 		</dependencies>
 	</dependencyManagement>
 
