@@ -61,8 +61,12 @@ Dependency management and version-properties
 		<derby.version>10.8.2.2</derby.version>
 		<mysql.version>5.1.38</mysql.version>
 		
+		<!-- WEB -->
+		<jetty-runner.version>9.3.7.v20160115</jetty-runner.version>
+
 		<!-- EMail -->
 		<javax.mail.version>1.5.2</javax.mail.version>
+		<greenmail.version>1.4.1</greenmail.version>
 
 		<!-- Maven Mojo -->
 		<maven-project.version>2.2.1</maven-project.version>
@@ -355,6 +359,18 @@ Dependency management and version-properties
 				<groupId>com.sun.mail</groupId>
 				<artifactId>javax.mail</artifactId>
 				<version>${javax.mail.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.icegreen</groupId>
+				<artifactId>greenmail</artifactId>
+				<version>${greenmail.version}</version>
+			</dependency>
+			
+			<!-- WEB -->
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-runner</artifactId>
+				<version>${jetty-runner.version}</version>
 			</dependency>
 			
 			<!-- DATABASES -->

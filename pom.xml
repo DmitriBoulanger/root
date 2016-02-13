@@ -43,10 +43,8 @@ and versions of the maven plug-ins.
 		<hibernate3-maven-plugin-hsqldb.version>1.8.0.7</hibernate3-maven-plugin-hsqldb.version>
 		
 		<!-- Versions JETTY PLUGINS  -->
-		<maven-jetty-plugin.version>6.1.26</maven-jetty-plugin.version>
-		<maven-jetty-plugin-hsqldb.version>1.8.0.7</maven-jetty-plugin-hsqldb.version>
-		<maven-jetty-plugin-slf4j.version>1.7.6</maven-jetty-plugin-slf4j.version>
-		
+		<jetty-maven-plugin.version>9.3.7.v20160115</jetty-maven-plugin.version>	
+		 
 		<build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
 
 	</properties>
@@ -159,16 +157,8 @@ and versions of the maven plug-ins.
 
 				<!-- Management Jetty Plugin-->
 				<plugin>
-					<groupId>org.mortbay.jetty</groupId>
-					<artifactId>maven-jetty-plugin</artifactId>
-					<version>${maven-jetty-plugin.version}</version>
-					<dependencies>
-						<dependency>
-							<groupId>org.slf4j</groupId>
-							<artifactId>slf4j-log4j12</artifactId>
-							<version>${maven-jetty-plugin-slf4j.version}</version>
-						</dependency>
-					</dependencies>
+					<artifactId>jetty-maven-plugin</artifactId>
+			   		<version>${jetty-maven-plugin.version}</version>
 				</plugin>
 				
 				<!-- Management Hibernate3 -->
