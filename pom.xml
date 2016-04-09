@@ -54,6 +54,12 @@ and versions of the maven plug-ins.
 		<pluginManagement>
 			<plugins>
 			
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>1.3.3.RELEASE</version>
+				</plugin>
+			
 				<!-- Management APACHE MAVEN-PLUGINS -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
